@@ -36,5 +36,5 @@ if [[ "$choice" == "y" || "$choice" == "Y" ]]; then
     open /Applications/Roblox*.app
 fi
 
-clear
+echo ""
 echo "MacSploit has been deleted and Roblox has been reinstalled."
