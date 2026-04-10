@@ -16,19 +16,20 @@ rm -rf ~/Library/Logs/Roblox
 echo "Installing Roblox..."
 curl -L -s -o /tmp/Roblox.dmg "https://setup.rbxcdn.com/mac/Roblox.dmg"
 hdiutil attach /tmp/Roblox.dmg -nobrowse -quiet
-cp -a /Volumes/Roblox/Roblox.app /Applications/
-hdiutil detach /Volumes/Roblox -quiet
+
+cp -a /Volumes/Roblox*/Roblox.app /Applications/
+hdiutil detach /Volumes/Roblox* -quiet
 rm /tmp/Roblox.dmg
 
 read -p "Do you want to open Roblox? (y/n) " choice
-case "$choice" in 
-  y|Y ) 
+case "$choice" in
+  y|Y )
     echo "Launching Roblox..."
     open /Applications/Roblox.app
     ;;
-  n|N ) 
+  n|N )
     ;;
-  * ) 
+  * )
     ;;
 esac
 
